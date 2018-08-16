@@ -1,0 +1,11 @@
+.notesBar {
+	background-color: white;
+	padding: 20px;
+}
+
+.noteNav {
+	padding: 10px;
+	background-color: #eee;
+	cursor: pointer;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,26 @@
+header {
+	background-color: #444;
+	border-bottom: 5px solid;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.app-main {
+	position: relative;
+	background: #eee;
+	padding: 10px;
+}
+
+.app-main header {
+	padding: 0.25em;
+}
+
+.app-main h1 {
+	color: lightgrey;
+}
+
+.col {
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+}
