@@ -1,5 +1,5 @@
 <div class='notesBar'>
 	<div class="noteNav" *ngFor="let note of notes">
-		<div>{{note.title}}</div>
+		<a routerLink="/notes/{{note.id}}">{{note.title}}</a>
 	</div>
 </div>

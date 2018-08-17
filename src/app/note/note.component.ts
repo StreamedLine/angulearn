@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
+import { NoteService } from '../note.service';
 import { Note } from '../note';
 
 @Component({
@@ -8,9 +10,25 @@ import { Note } from '../note';
   styleUrls: ['./note.component.css']
 })
 export class NoteComponent implements OnInit {
-  constructor() { }
+  note: Note;
+
+  getNote(): void {
+  	this.route.params.subscribe(
+  		params => {
+  			let id = +params['id'];
+  			this.noteService.getNote(id)
+  				.subscribe(note => this.note = note)
+  		}
+  	)
+  }
+
+  constructor(
+  	private noteService: NoteService,
+  	private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+  	this.getNote()
   }
 
 }

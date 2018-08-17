@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
 import { NoteComponent } from './note/note.component';
 import { NoteViewComponent } from './note-view/note-view.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { NoteViewComponent } from './note-view/note-view.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
