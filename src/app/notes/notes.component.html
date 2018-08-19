@@ -1,5 +1,6 @@
 <div class='notesBar'>
-	<div class="noteNav" *ngFor="let note of notes">
-		<a routerLink="/notes/{{note.id}}">{{note.title}}</a>
+	<div routerLink='/notes/new' class="noteNav newNoteBtn">New Note</div>
+	<div *ngFor="let note of notes">
+		<div class="noteNav" routerLink="/notes/{{note.id}}">{{note.title}}</div>
 	</div>
 </div>

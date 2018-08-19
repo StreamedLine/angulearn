@@ -1,5 +1,5 @@
 <div class="notePad">
-	<div class='title' contenteditable='true'>{{note.title || 'Title (edit me)'}}</div>
+	<div class='title' contenteditable='true' [(ngModel)]="note.title"></div>
 	<textarea name="notePad" id="notePad" cols="80" rows="30" [(ngModel)]="note.text"></textarea>
 	<button>Save</button>
 </div>

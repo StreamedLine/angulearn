@@ -16,8 +16,12 @@ export class NoteComponent implements OnInit {
   	this.route.params.subscribe(
   		params => {
   			let id = +params['id'];
-  			this.noteService.getNote(id)
-  				.subscribe(note => this.note = note)
+        if (id) {
+    			this.noteService.getNote(id)
+    				.subscribe(note => this.note = note);
+        } else {
+          this.note = {id: 0, title: 'Title (edit me)', text: ''}
+        }
   		}
   	)
   }
@@ -28,7 +32,7 @@ export class NoteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  	this.getNote()
+  	this.getNote();
   }
 
 }
